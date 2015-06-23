@@ -15,6 +15,7 @@
 #define GSM_PIN 3 // Tri-state buffer control pin to enable GSM serial
 #define GPS_PIN 4 // Tri-state buffer control pin to enable GPS serial
 #define PWR_PIN 5
+#define STATUS_PIN 6 //Added
 
 // GPS can also be used with dedicated serial, but you must wired it
 // up manually. There are GPS TXA & GPS RXA soldering pad available

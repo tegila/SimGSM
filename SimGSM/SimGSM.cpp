@@ -21,9 +21,14 @@ void SimGSM::end() {
 }
 
 void SimGSM::powerToggle() {
-	digitalWrite(PWR_PIN, HIGH);
-	delay(2000);
-	digitalWrite(PWR_PIN, LOW);
+  int pinState = 0;
+  pinState = digitalRead(STATUS_PIN);
+  if(pinState==LOW) 
+  {
+    digitalWrite(PWR_PIN, HIGH);
+    delay(2000);
+    digitalWrite(PWR_PIN, LOW);
+  }
 }
 
 void SimGSM::send(const char *cmd) {
